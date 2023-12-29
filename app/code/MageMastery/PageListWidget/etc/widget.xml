@@ -1,0 +1,34 @@
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+
+    <widget id="magemastery_page_list_widget" class="MageMastery\PageListWidget\Block\Widget\PageList">
+        <label>Page List Widget</label>
+        <description>A widget to display a list of CMS pages.</description>
+        <parameters>
+            <!-- Title Option -->
+            <parameter name="title" xsi:type="text" required="false">
+                <label>Title</label>
+            </parameter>
+
+            <!-- Display Mode Option -->
+            <parameter name="display_mode" xsi:type="select" required="true">
+                <label>Display Mode</label>
+                <options>
+                    <option name="all_pages" value="all_pages">
+                        <label>All Pages</label>
+                    </option>
+                    <option name="specific_pages" value="specific_pages">
+                        <label>Specific Pages</label>
+                    </option>
+                </options>
+            </parameter>
+
+            <!-- Selected Pages Option -->
+            <parameter name="selected_pages" xsi:type="multiselect" required="false" visible="false">
+                <label>Selected Pages</label>
+            </parameter>
+
+        </parameters>
+    </widget>
+
+</widgets>

@@ -1,0 +1,14 @@
+<!--
+/**
+    * Magebit_PageListWidget
+    *
+    * @category     Magebit
+    * @package      Magebit_PageListWidget
+    * @author       Arturs Podzins <arturs.podzins@magebit.com>
+    * @copyright    Copyright (c) 2023 Magebit, Ltd.(https://www.magebit.com/)
+    */
+-->
+<theme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/theme.xsd">
+    <title>MageMastery Learning</title>
+    <parent>Magento/luma</parent>
+</theme>

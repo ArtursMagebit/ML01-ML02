@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Learning\GridRendering\Ui\DataProvider\Category\ListingDataProvider">
+        <plugin name="learning_gridrendering_attributes" type="Learning\GridRendering\Plugin\AddAttributesToUiDataProvider"/>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="learning_gridrendering_category_listing_data_source" xsi:type="string">LearningGridRenderingCategoryCollection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="LearningGridRenderingCategoryCollection" type="Learning\GridRendering\Ui\DataProvider\Category\Listing\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">catalog_category_entity</argument>
+            <argument name="resourceModel" xsi:type="string">Learning\GridRendering\Model\ResourceModel\Category</argument>
+        </arguments>
+    </virtualType>
+</config>
